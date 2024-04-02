@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Let's Play Dice!</h1>
+        <img id="dice" src="dice6.png" alt="Dice Image">
+        <button onclick="rollDice()">Roll the Dice</button>
+    </div>
+
+    <script>
+        function rollDice() {
+            var diceImage = document.getElementById('dice');
+            var randomNumber = Math.floor(Math.random() * 6) + 1;
+            diceImage.src = "dice" + randomNumber + ".png";
+        }
+    </script>
+</body>
+</html>
